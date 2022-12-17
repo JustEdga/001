@@ -1,7 +1,4 @@
-body {
-    background-color: #181818;
+.btn {
+    text-decoration: none;
     color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
-        sans-serif;
-    font-size: 20px;
 }
