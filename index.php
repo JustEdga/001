@@ -1,8 +1,11 @@
 <?php
 
-if ($_GET['color'] ?? '') {
-    $color = 'crimson';
+
+$n = [];
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $n[] = rand(5, 10);
 }
+
 
 ?>
 
@@ -12,11 +15,19 @@ if ($_GET['color'] ?? '') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>WEB mechanika</title>
+    <title>Document</title>
 </head>
-<body style="background-color: <?= $color ?? '#0d1117' ?>; color: #fff;">
-    <a class="btn" href="http://localhost/bit-php/001/index.php">Vienas</a>
-    <a class="btn" href="http://localhost/bit-php/001/index.php?color=1">Antras</a>
+<body>
+
+    <ul>
+    <?php for($i = 0; $i < count($n); $i++) : ?>
+        <li><?= $n[$i] ?></li>
+    <?php endfor ?>
+    </ul>
+    <form action="http://localhost/bit-php/001/index.php" method="post">
+
+        <button type="submit">GO</button>
+
+    </form>
 </body>
 </html>
