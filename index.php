@@ -6,6 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $n[] = rand(5, 10);
 }
 
+$n = json_encode($n);
+
+file_put_contents(__DIR__.'/data.json', $n);
+$jn = file_get_contents(__DIR__ . '/data.json');
+$number = json_decode($jn, 1);
 
 ?>
 
@@ -20,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
     <ul>
-    <?php for($i = 0; $i < count($n); $i++) : ?>
-        <li><?= $n[$i] ?></li>
+    <?php for($i = 0; $i < count($number); $i++) : ?>
+        <li><?= $number[$i] ?></li>
     <?php endfor ?>
     </ul>
     <form action="http://localhost/bit-php/001/index.php" method="post">
