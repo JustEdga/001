@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PINK</title>
 </head>
-<body>
-    <a href="http://localhost/bit-php/001/red.php"></a>
+<body style="background: HotPink;">
+    <form action="http://localhost/bit-php/001/rose.php" method="post">
+        <button>GO TO ROSE</button>
+    </form>
 </body>
 </html>

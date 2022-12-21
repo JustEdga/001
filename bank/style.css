@@ -1,0 +1,101 @@
+body {
+    background-color: #0d1117;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    color: #fff;
+    font-size: 16px;
+}
+.container {
+    margin: 30px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.containerForm {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 120px;
+}
+.containerData {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.containerData > .data > p > i {
+    color: skyblue;
+    padding: 0 5px;
+}
+.containerData > .data > p > span {
+    padding-right: 20px;
+}
+.formBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnBin {
+    display: flex;
+}
+.data {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.btn {
+    text-decoration: none;
+    color: crimson;
+    border: 1px solid crimson;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    font-size: 18px;
+    transition: all 0.4s;
+}
+.btn:hover {
+    background-color: crimson;
+    color: #fff;
+}
+.btnSubmit {
+    border: 1px solid crimson;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: crimson;
+    background-color: #0d1117;
+    font-size: 16px;
+}
+.btnSubmit:hover {
+    cursor: pointer;
+    background-color: crimson;
+    color: #fff;
+}
+/* .delete {
+    position: absolute;
+    right: 10px;
+} */
+input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 16px;
+}
+input::placeholder {
+    color: #0d111772;
+    font-size: 16px;
+}
+.alert {
+    position: absolute;
+    left: 50%;
+    background: rgba(220, 20, 60, 0.2);
+    border: 1px solid rgba(220, 20, 60, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    padding: 25px 50px;
+    transform: translateX(-50%);
+}
