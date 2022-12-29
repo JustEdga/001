@@ -1,5 +1,5 @@
 body {
-    background-color: #0d1117;
+    background-color: #929292;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
         sans-serif;
     color: #fff;
@@ -8,8 +8,7 @@ body {
 .container {
     margin: 30px 0px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 .containerForm {
     display: flex;
@@ -40,6 +39,8 @@ body {
 }
 .data {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .form {
@@ -60,7 +61,7 @@ body {
     transition: all 0.4s;
 }
 .btn:hover {
-    background-color: crimson;
+    background-color: #dcb0fe;
     color: #fff;
 }
 .btnSubmit {
@@ -68,7 +69,7 @@ body {
     border-radius: 5px;
     padding: 5px 15px;
     color: crimson;
-    background-color: #0d1117;
+    background-color: #cccccc8e;
     font-size: 16px;
 }
 .btnSubmit:hover {
@@ -94,6 +95,21 @@ input::placeholder {
     left: 50%;
     background: rgba(220, 20, 60, 0.2);
     border: 1px solid rgba(220, 20, 60, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+    padding: 25px 50px;
+    transform: translateX(-50%);
+    animation-name: alert;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+.success {
+    position: absolute;
+    left: 50%;
+    background: rgba(14, 215, 78, 0.2);
+    border: 1px solid rgba(14, 215, 78, 0.5);
     border-radius: 15px;
     backdrop-filter: blur(3px);
     padding: 25px 50px;
