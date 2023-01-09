@@ -22,4 +22,12 @@ class Pinigine {
         echo 'Pinigines suma: '.$this->metaliniaiPinigai + $this->popieriniaiPinigai;
     }
 
+    public function monetos() : void {
+        echo 'Metaliniai pinigai: '.$this->metaliniaiPinigai;
+    }
+
+    public function banknotai() : void {
+        echo 'Popieriniai pinigai: '.$this->popieriniaiPinigai;
+    }
+
 }

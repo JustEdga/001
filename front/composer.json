@@ -1,0 +1,17 @@
+{
+    "name": "eenep/front",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Front\\": "app/",
+            "App\\DB\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "JustEdga",
+            "email": "114071432+JustEdga@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}

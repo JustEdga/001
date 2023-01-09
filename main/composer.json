@@ -1,0 +1,15 @@
+{
+    "name": "eenep/001",
+    "autoload": {
+        "psr-4": {
+            "": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "JustEdga",
+            "email": "114071432+JustEdga@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
