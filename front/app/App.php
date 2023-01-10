@@ -2,6 +2,8 @@
 namespace Front;
 use Front\Controllers\Calculator;
 use Front\Controllers\Grybas;
+use Front\Controllers\GrybasApi;
+use Front\Controllers\Api;
 
 class App {
 
@@ -17,6 +19,16 @@ class App {
     {
 
         $method = $_SERVER['REQUEST_METHOD'];
+
+
+        if ($method == 'OPTIONS') {
+            header('Access-Control-Allow-Origin: *');
+            header('Access-Control-Allow-Methods: OPTIONS, GET, POST, DELETE, PUT');
+            header("Access-Control-Allow-Headers: Authorization, Content-Type, X-Requested-With");
+            header('Content-Type: application/json');
+            return null;
+        }
+
 
         if ($url[0] == 'calculator' && in_array($url[1], ['sum', 'diff', 'mult', 'div']) && count($url) == 4) {
             return (new Calculator)->{$url[1]}($url[2], $url[3]);
@@ -41,6 +53,34 @@ class App {
         if ($url[0] == 'grybai' && $url[1] == 'delete' && count($url) == 3 && $method == 'POST') {
             return (new Grybas)->delete($url[2]);
         }
+        if ($url[0] == 'users' && $url[1] == 'all' && count($url) == 2 && $method == 'GET') {
+            return (new Api)->allUsers();
+        }
+        if ($url[0] == 'users' && $url[1] == 'js' && count($url) == 2 && $method == 'GET') {
+            return (new Api)->jsUsers();
+        }
+
+
+        // GRYBAI API
+
+        if ($url[0] == 'api' && $url[1] == 'grybai' && count($url) == 2 && $method == 'GET') {
+            return (new GrybasApi)->index();
+        }
+
+        if ($url[0] == 'api' && $url[1] == 'grybai' && $url[2] == 'save' && count($url) == 3 && $method == 'POST') {
+            return (new GrybasApi)->save();
+        }
+
+        if ($url[0] == 'api' && $url[1] == 'grybai' && $url[2] == 'update' && count($url) == 4 && $method == 'PUT') {
+            return (new GrybasApi)->update($url[3]);
+        }
+
+        if ($url[0] == 'api' && $url[1] == 'grybai' && $url[2] == 'delete' && count($url) == 4 && $method == 'DELETE') {
+            return (new GrybasApi)->delete($url[3]);
+        }
+
+
+
 
 
         return '404 NOT FOUND';
